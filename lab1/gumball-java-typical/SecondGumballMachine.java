@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class SecondGumballMachine extends MyMachine{
+public class SecondGumballMachine extends GumballMachine{
     public static final int QUARTER = 25;
     private ArrayList<Integer> coinAcceptedList;
     private int coins;

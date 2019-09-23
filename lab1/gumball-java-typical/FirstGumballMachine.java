@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class FirstGumballMachine extends MyMachine{
+public class FirstGumballMachine extends GumballMachine{
 	public static final int QUARTER = 25;
     private ArrayList<Integer> coinAcceptedList;
     private int coins;

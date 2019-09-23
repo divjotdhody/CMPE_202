@@ -1,42 +1,34 @@
+import java.util.ArrayList;
+
 public class GumballMachine
 {
+    private int numGumballs;
 
-    private int num_gumballs;
-    private boolean has_quarter;
 
-    public GumballMachine( int size )
-    {
-        // initialise instance variables
-        this.num_gumballs = size;
-        this.has_quarter = false;
+    public GumballMachine(int numGumballs) {
+        this.numGumballs = numGumballs;
+     
     }
-
-    public void insertQuarter(int coin)
+    public void insertCoin(int numGumballs)  
     {
-        if ( coin == 25 )
-            this.has_quarter = true ;
-        else 
-            this.has_quarter = false ;
+    	this.numGumballs=numGumballs;
     }
-    
-    public void turnCrank()
+    public void turnCrank(){
+        System.out.println("Child can override this Turn Crank Method");
+    }
+    protected void gumballReleasing()
     {
-    	if ( this.has_quarter )
+    	if (numGumballs > 0 )
     	{
-    		if ( this.num_gumballs > 0 )
-    		{
-    			this.num_gumballs-- ;
-    			this.has_quarter = false ;
-    			System.out.println( "Thanks for your quarter.  Gumball Ejected!" ) ;
-    		}
-    		else
-    		{
-    			System.out.println( "No More Gumballs!  Sorry, can't return your quarter." ) ;
-    		}
+    		numGumballs=numGumballs-1;
+    		System.out.println("Yeah..Gumball Ejected..!!");
     	}
-    	else 
-    	{
-    		System.out.println( "Please insert a quarter" ) ;
-    	}        
+    		else {
+    			System.out.println("Sorry..No more Gumballs..!!");
+    		}
     }
+	public void insertCoin(int quarter, int quarter2) {
+		// TODO Auto-generated method stub
+		System.out.println("Child can override this insertCoin Method");
+	}
 }

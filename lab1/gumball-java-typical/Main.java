@@ -4,7 +4,7 @@ public class Main {
     public static final int QUARTER = 25; 
     
 	public static void main(String[] args) {
-		MyMachine gumballMachineOne = new FirstGumballMachine(4);
+        GumballMachine gumballMachineOne = new FirstGumballMachine(4);
 
         System.out.println(gumballMachineOne);
 
@@ -19,7 +19,7 @@ public class Main {
         
         System.out.println(gumballMachineOne+"\n");
 
-        MyMachine gumballMachineTwo = new SecondGumballMachine(5);
+        GumballMachine gumballMachineTwo = new SecondGumballMachine(5);
 
         System.out.println(gumballMachineTwo);
 
@@ -33,7 +33,7 @@ public class Main {
 
         System.out.println(gumballMachineTwo + "\n");
 
-        MyMachine gumballMachineThree = new ThirdGumballMachine(5);
+        GumballMachine gumballMachineThree = new ThirdGumballMachine(5);
         System.out.println(gumballMachineThree);
         gumballMachineThree.insertCoin(QUARTER);
         gumballMachineThree.insertCoin(DIME);
